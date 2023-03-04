@@ -12,7 +12,7 @@ test -d "$DESTDIR" || mkdir -pv $DESTDIR
 cat > /etc/yum.repos.d/docker.repo << EOF
 [docker-ce-stable]
 name=Docker CE Stable - \$basearch
-baseurl=https://download.docker.com/linux/centos/\$releasever/\$basearch/stable
+baseurl=https://download.docker.com/linux/centos/${EL_VERSION}/\$basearch/stable
 enabled=1
 gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
